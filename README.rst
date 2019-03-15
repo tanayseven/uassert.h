@@ -46,6 +46,20 @@ Run the above code as follows:
     Assertion failure [5 == 7] on line 9 in file ./test/main.c
 
 
+How does it work?
+-----------------
+
+This file defines two macros
+
+1.  ``ASSERT(EXPRESSION)`` macro accepts an expression as a parameter and evaluates it to be true or not. 
+    If it is evaluated as false then it will print to stderr that the exception has occured. It will also
+    print the line number and the file name where this assertion has failed.
+
+2.  ``TEST_SUCCESS`` macro returns the value 0 if no assertion has failed and returns a 1 if any one assertion
+    has failed. This macro is supposed to be used as return value for the ``main()`` of the program so that the program
+    will fail in case if it is running from a Makefile and/or is being run on a continuous integration system.
+
+
 LICENSE
 -------
 
