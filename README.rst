@@ -39,12 +39,11 @@ Run the above code as follows:
 
 .. code-block:: bash
 
-    make test
+    cc -o ./bin/tests ./test/main.c
     ./bin/tests
     Running tests...
     Assertion failure [5 == 4] on line 7 in file ./test/main.c
     Assertion failure [5 == 7] on line 9 in file ./test/main.c
-    make: *** [test] Error 1
 
 
 LICENSE
